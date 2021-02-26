@@ -50,7 +50,7 @@ ul {
 .body {
   border: 1px solid gray;
   margin: 20px auto;
-  margin-bottom: 200px;
+  margin-bottom: 210px;
   border-radius: 5px;
   max-width: 860px;
 }
@@ -78,4 +78,7 @@ ul {
 }
 .col-2 {
   padding-bottom: auto;
+}
+small {
+  margin-left: 39px;
 }
