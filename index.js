@@ -1,4 +1,3 @@
-
 //day time
 let currentDayTime = new Date();
   console.log(currentDayTime);
@@ -34,17 +33,21 @@ function formatDayTime(date) {
   console.log(formatDayTime(new Date));
   
   //CITY / feels like
+  //API URL : 
   function displayWeatherCondition(response) {
     document.querySelector("#city-name").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
+    document.querySelector("#description-js").innerHTML = response.data.weather[0].description;
     document.querySelector("#feels-like-js").innerHTML = `${Math.round(response.data.main.feels_like)}°C`;
     document.querySelector("#temp-max").innerHTML = `${Math.round(response.data.main.temp_max)}°C`;
-  document.querySelector("#temp-min").innerHTML = `${Math.round(response.data.main.temp_min)}°C`;
-  document.querySelector("#humidity-js").innerHTML = `${response.data.main.humidity}%`;
-  document.querySelector("#wind-js").innerHTML = `${response.data.wind.speed} km/h`;
-  document.querySelector("#visibility-js").innerHTML = `${response.data.visibility}%`;
-  document.querySelector("#description-js").innerHTML = response.data.weather[0].main;
-}
+    document.querySelector("#temp-min").innerHTML = `${Math.round(response.data.main.temp_min)}°C`;
+    document.querySelector("#humidity-js").innerHTML = `${response.data.main.humidity}%`;
+    document.querySelector("#wind-js").innerHTML = `${response.data.wind.speed} km/h`;
+    document.querySelector("#visibility-js").innerHTML = `${response.data.visibility}%`;
+
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  }
 
 function search(city) {
   let apiKey = "7ec53300c1e61afc2dfa56d235a9d50a";
@@ -59,6 +62,7 @@ function handleSubmit(event) {
 }
 
 //current location
+//API URL
 function getLocation(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;

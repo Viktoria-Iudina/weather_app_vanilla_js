@@ -36,9 +36,10 @@ h2 {
   padding-left: 35px;
   padding-right: 1px;
 }
-.weather-description {
+.weather-description { 
   padding-left: 35px;
 }
+
 span {
   text-align: center;
 }
@@ -62,15 +63,18 @@ ul {
   position: relative;
   top: -17px;
 }
-.fa-cloud {
+
+/*.fa-cloud {
   text-align: center;
   font-size: 70px;
   color: #2d2d50;
-}
+}*/
+
 .description,
 .icon {
   text-align: center;
   padding-right: auto;
+  text-transform: capitalize;
 }
 .icons {
   font-size: 25px;
