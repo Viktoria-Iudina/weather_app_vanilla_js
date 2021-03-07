@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="../project/style.css">
     <script src="https://kit.fontawesome.com/6c5bd25cb5.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
@@ -43,8 +43,8 @@
 
             <div class="row">
                 <div class="col-3">
-                    <span class="temperature" id="temperature"></span><span class="units" id="cel-link">°C
-                        |<span id="fah-link">°F</span></span>
+                    <span class="temperature" id="temperature"></span><span class="units"><a href="#" id="cel-link" class="active">°C</a>
+                        | <a href="#" id="fah-link">°F</a></span>
                 </div>
                 <div class="col-3">
                     <p class="description" id="description-js" style="font-size: 22px;"><strong></strong></p>
@@ -95,7 +95,7 @@
         <a href="https://github.com/Viktoria-Iudina/project" target="_blank">Open-source code</a>, by Viktoriia Iudina
     </small>
 
-    <script src="js/index.js"></script>
+    <script src="../project/index.js"></script>
 </body>
 
 </html>

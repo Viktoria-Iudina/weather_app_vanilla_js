@@ -63,7 +63,19 @@ ul {
   position: relative;
   top: -17px;
 }
-
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+#cel-link,
+#fah-link {
+  text-decoration: none;
+}
+.active:hover {
+  color: black;
+  text-decoration: none;
+}
 /*.fa-cloud {
   text-align: center;
   font-size: 70px;
